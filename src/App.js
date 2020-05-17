@@ -43,7 +43,7 @@ function App() {
 
 
   const onCreateGame = () => {
-    axios.post(process.env.REST_URL, {
+    axios.post(process.env.REACT_APP_REST_URL, {
       "game": "uno"
     }).then((response) => {
       console.log(response);
