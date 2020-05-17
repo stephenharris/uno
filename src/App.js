@@ -7,19 +7,19 @@ import Play from './screens/Play/Play';
 import GameOver from './screens/GameOver/GameOver';
 import axios from 'axios';
 
-var exampleSocket = new WebSocket(process.env.WEBSOCKET_URL);
-
-function emit(action, payload){
-  let msg = {action:action, payload:payload};
-  exampleSocket.send(JSON.stringify(msg));
-}
-
 function App() {
+
+  var exampleSocket = new WebSocket('wss://e8ttpjose2.execute-api.eu-west-2.amazonaws.com/testing/');
 
   const [gameState, setGameState] = useState(GameState.CREATE);
   const [game, setGame] = useState();
   const [gameId, setGameId] = useState(null);
 
+  const emit = (action, payload) => {
+    let msg = {action:action, payload:payload};
+    exampleSocket.send(JSON.stringify(msg));
+  }
+  
   exampleSocket.onmessage = function (event) {
     console.log('-----------msgToClient-----------');
     const data = JSON.parse(event.data);
