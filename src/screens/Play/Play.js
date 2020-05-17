@@ -48,7 +48,7 @@ function Play({gameState, onPlayCard, onPickUp}) {
       return;
     }
 
-    const [number, colour] = selected.toLowerCase().split("");
+    const [, colour] = selected.toLowerCase().split("");
 
     if (colour === '?' && !chosenColour) {
       setShowModal(true);
