@@ -1,5 +1,5 @@
 import React from 'react';
-import classNames from '../../class-names';
+import cn from 'classnames';
 import './Card.css';
 
 function Card({type, interactive, onClick, selected}) {
@@ -35,7 +35,7 @@ function Card({type, interactive, onClick, selected}) {
 
   return (
     <button className="cardWrap" disabled={!interactive} onClick={onClick}>
-      <div className={classNames({
+      <div className={cn({
       'Card': true,
       'Card--interactive': interactive,
       ['Card--' + colourName]: true,
