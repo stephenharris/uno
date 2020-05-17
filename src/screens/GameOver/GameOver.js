@@ -9,28 +9,28 @@ function GameOver({gameState}) {
 
   return (
     <div>
-      <div class="confetti"></div>
-      <div class="confetti"></div>
-      <div class="confetti"></div>
-      <div class="confetti"></div>
-      <div class="confetti"></div>
-      <div class="confetti"></div>
-      <div class="confetti"></div>
-      <div class="confetti"></div>
-      <div class="confetti"></div>
-      <div class="confetti"></div>
+      <div className="confetti"></div>
+      <div className="confetti"></div>
+      <div className="confetti"></div>
+      <div className="confetti"></div>
+      <div className="confetti"></div>
+      <div className="confetti"></div>
+      <div className="confetti"></div>
+      <div className="confetti"></div>
+      <div className="confetti"></div>
+      <div className="confetti"></div>
 
-      <div class="confetti"></div>
-      <div class="confetti"></div>
-      <div class="confetti"></div>
-      <div class="confetti"></div>
-      <div class="confetti"></div>
-      <div class="confetti"></div>
-      <div class="confetti"></div>
+      <div className="confetti"></div>
+      <div className="confetti"></div>
+      <div className="confetti"></div>
+      <div className="confetti"></div>
+      <div className="confetti"></div>
+      <div className="confetti"></div>
+      <div className="confetti"></div>
 
-      <div class="confetti"></div>
-      <div class="confetti"></div>
-      <div class="confetti"></div>
+      <div className="confetti"></div>
+      <div className="confetti"></div>
+      <div className="confetti"></div>
 
       <p className="winnerBanner"><strong>{getWinner()}</strong> is the winner!</p>
     </div>
