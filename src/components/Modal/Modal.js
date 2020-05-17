@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useCallback} from 'react';
 import FocusTrap from "focus-trap-react";
 import cn from 'classnames';
 /*import {CloseIcon} from '../Icons/Icons';*/
@@ -10,10 +10,13 @@ const Modal = ({isVisible, title, onClose, children, size = "small"}) => {
         onClose();
     }
 
+    const stableOnClose = useCallback(onClose, [])
+
     useEffect(() => {
+
         const onEscCloseModal = ({ key }) => {
             if (key === "Escape") {
-                handleClose();
+                stableOnClose();
             }
         };
     
@@ -41,7 +44,7 @@ const Modal = ({isVisible, title, onClose, children, size = "small"}) => {
         }
     
         return () => document.removeEventListener("keydown", onEscCloseModal);
-    }, [isVisible]);
+    }, [isVisible, stableOnClose]);
 
     if (!isVisible) {
 		return null;
