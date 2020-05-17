@@ -1,0 +1,86 @@
+.login {
+    max-width: 300px;
+    margin: auto;
+}
+
+.cardActions {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+}
+
+.card-animation-enter {
+  transform: translate(0, -60%);
+}
+ 
+.card-animation-enter.card-animation-enter-active {
+  opacity: 1;
+  transition: position 500ms ease-in;
+}
+
+.card-animation-exit {
+  opacity: 1;
+}
+
+.card-animation-exit.card-animation-exit-active {
+  opacity: 0.01;
+  transition: opacity 300ms ease-in;
+}
+
+.wrap {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.playersWrap {
+  position: relative;
+  margin-left: 2em;
+}
+
+ul.players {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  padding: 0;
+  border-radius: 50%;
+  list-style: none;
+  font-size: 1rem;
+  border: 1rem solid #e7e7e7;
+  z-index:-1;
+}
+
+
+ul.players li {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200px;
+  height: 200px;
+  margin: -100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform .5s ease-out;
+}
+
+.players__player--currentPlayer {
+  font-weight:bold;
+}
+
+.directions {
+  width: 98px;
+  position: absolute;
+  left: calc(50%-32px);
+  top: calc(50%-32px);
+  left: calc(50% - 48px);
+  top: calc(50% - 48px);
+  fill: dimgray;
+  transition: transform .5s ease-out;
+  transform: scaleX(-1);
+}
+
+.directions--reversed {
+  transform: scaleX(1);
+}

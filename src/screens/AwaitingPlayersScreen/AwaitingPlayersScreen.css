@@ -1,0 +1,8 @@
+.awaitingPlayerList {
+    max-width: 300px;
+    margin:auto;
+}
+
+.awaitingPlayerList__player--currentPlayer {
+    font-weight: bold;;
+}

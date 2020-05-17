@@ -1,0 +1,39 @@
+html{
+
+  background: hsl(53.3, 56%, 94.5%);
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.5;
+  padding: 10px;
+  color: #312a25;
+  /*overflow: hidden;*/
+}
+
+.h1, .h2, .h3 {
+  margin:1rem;
+  text-align: center;
+  color:#312a25;
+  font-weight: bold;
+  color:#f2d700;
+  text-shadow: 1px 0 #000000, -1px -1px 0 #000000, -1px 1px 0 #000000, 1px -1px 0 #000000, 1px 0 0 #000000, -1px 0 0 #000000, 0 -1px 0 #000000, 0 1px 0 #000000, 4px 4px 0 #000000;
+}
+
+.h1 {
+  font-size: 48px;
+}
+.h2 {
+  font-size: 32px;
+}
+
+
+#root {
+  height: calc(100% - 6rem);
+}
+
+html {height: 100%;}
+body {height: 100%; margin: 0; padding: 0;}

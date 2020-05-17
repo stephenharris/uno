@@ -1,0 +1,104 @@
+.modal__background {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(47, 26, 69, 0.5);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+    animation: bgFadeIn 200ms linear;
+    z-index: 1;
+}
+
+@keyframes bgFadeIn {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+.modal__foreground {
+	width: 95vw;
+	max-height: calc(100% - 5vw);
+	position: relative;
+	background: #ffffff;
+	display: flex;
+	flex-direction: column;
+	animation: modalEntrance 200ms ease-in-out;
+	border-radius: 0.375rem;
+	max-width: 1280px;
+}
+
+@media screen and (min-width: 768px) {
+	.modal__foreground.modal--sizeSmall {
+		width: 75vw;
+	}
+
+	.modal__foreground.modal--sizeLarge {
+		width: 95vw;
+	}
+}
+
+@media screen and (min-width: 1280px) {
+	.modal__foreground.modal--sizeSmall {
+		width: 40vw;
+	}
+
+	.modal__foreground.modal--sizeLarge {
+		width: 95vw;
+	}
+}
+
+.modal__closeBar {
+	flex-shrink: 0;
+	display: flex;
+	border-bottom: 2px solid $secondaryBackgroundColor;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1em 2em;
+}
+.modal__title {
+	font-size: 1.5em;
+	margin:0;
+	padding:0;
+}
+.modal__closeButton {
+	cursor: pointer;
+	margin-right: -2em;
+	background: none;
+	border: none;
+	color: #ff00;/*$interactiveColor;*/
+}
+
+.modal__closeButton:hover,
+.modal__closeButton:focus,
+.modal__closeButton:active {
+	color: #ff00;/*$interactiveHoverColor;*/
+}
+
+.modal__content {
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+.modal__content__child {
+	padding: 0 2em 2em 2em;
+}
+
+@keyframes modalEntrance {
+	0% {
+		margin-top: -75px;
+		opacity: 0;
+	}
+
+	100% {
+		margin-top: 0;
+		opacity: 1;
+	}
+}

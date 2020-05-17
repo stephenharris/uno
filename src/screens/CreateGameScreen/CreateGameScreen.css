@@ -1,0 +1,13 @@
+.login {
+    max-width: 300px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+.login .button {
+    margin:auto;
+}
+.exampleCards{
+    text-align: center;
+    margin: 4em 0;
+}

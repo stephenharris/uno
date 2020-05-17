@@ -1,0 +1,98 @@
+.radioGroup {
+    border:none;
+    margin: 0;
+    padding: 0;   
+}
+.radioButton {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	cursor: pointer;
+	position: relative;
+}
+.radioButton > input {
+	position: absolute;
+	opacity: 0;
+	cursor: pointer;
+	height: 0;
+	width: 0;
+}
+
+.radioButton > input:checked ~ .radioButton__indicator:after {
+	display: block;
+}
+.radioButton > input:focus + span {
+	border-color: #646569;;
+}
+
+.radioButton--blue > input:focus + span {
+	border-color: #0063B3;
+}
+.radioButton--green > input:focus + span {
+	border-color: #18A849;
+}
+.radioButton--red > input:focus + span {
+	border-color: #C72A18;
+}
+.radioButton--yellow > input:focus + span {
+	border-color: #E6CA1E;;
+}
+
+.radioButton__indicator {
+	margin-right: 0.5rem;
+	position: relative;
+	top: 0;
+	left: 0;
+	height: 26px;
+	width: 26px;
+	min-width: 26px;
+	max-width: 26px;
+	border-radius: 50%;
+	border: 2px solid #646569;;
+}
+.radioButton__indicator:after {
+	content: "";
+	position: absolute;
+	display: none;
+
+	top: 4px;
+	left: 4px;
+	width: 18px;
+	height: 18px;
+	border-radius: 50%;
+	background:#646569;;
+}
+
+.radioButton--blue .radioButton__indicator:after {
+	background: #0063B3;
+}
+.radioButton--green >.radioButton__indicator:after {
+	background: #18A849;
+}
+.radioButton--red >.radioButton__indicator:after {
+	background: #C72A18;
+}
+.radioButton--yellow >.radioButton__indicator:after {
+	background: #E6CA1E;;
+}
+
+.radioGroup__label {
+	font-weight: bold;
+	margin-bottom: 0.5rem;
+	/*color: $secondaryTextColor;*/
+}
+
+.radioGroup__buttons {
+	margin-bottom: 1.5rem;
+}
+
+.radioGroup:last-child .radioGroup__buttons {
+	margin-bottom: 0;
+}
+
+.radioGroup	.radioButton {
+	margin-bottom: 1rem;
+}
+.radioGroup	.radioButton:last-child {
+	margin-bottom: 0;
+}

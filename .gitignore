@@ -1,0 +1,4 @@
+.config
+.npm
+node_modules
+build

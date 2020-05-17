@@ -1,0 +1,23 @@
+.textInput{
+    display: flex;
+    margin-bottom: 1.5rem;
+    flex-direction: column;
+}
+
+.textInput__field {
+    transition: border .25s;
+    border: .1rem solid #ccc;
+    padding: .75rem;
+    border-radius: .25rem;
+}
+
+.textInput__field:focus {
+    outline: 0;
+    border-color: 
+    #646569;
+}
+
+.textInput__label {
+    display: block;
+    margin-bottom:.5rem;
+}
