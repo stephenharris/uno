@@ -9,29 +9,28 @@ function GameOver({gameState}) {
 
   return (
     <div>
-      <div className="confetti"></div>
-      <div className="confetti"></div>
-      <div className="confetti"></div>
-      <div className="confetti"></div>
-      <div className="confetti"></div>
-      <div className="confetti"></div>
-      <div className="confetti"></div>
-      <div className="confetti"></div>
-      <div className="confetti"></div>
-      <div className="confetti"></div>
-
-      <div className="confetti"></div>
-      <div className="confetti"></div>
-      <div className="confetti"></div>
-      <div className="confetti"></div>
-      <div className="confetti"></div>
-      <div className="confetti"></div>
-      <div className="confetti"></div>
-
-      <div className="confetti"></div>
-      <div className="confetti"></div>
-      <div className="confetti"></div>
-
+      <div className="confetti">
+        <div className="confetti--piece"></div>
+        <div className="confetti--piece"></div>
+        <div className="confetti--piece"></div>
+        <div className="confetti--piece"></div>
+        <div className="confetti--piece"></div>
+        <div className="confetti--piece"></div>
+        <div className="confetti--piece"></div>
+        <div className="confetti--piece"></div>
+        <div className="confetti--piece"></div>
+        <div className="confetti--piece"></div>
+        <div className="confetti--piece"></div>
+        <div className="confetti--piece"></div>
+        <div className="confetti--piece"></div>
+        <div className="confetti--piece"></div>
+        <div className="confetti--piece"></div>
+        <div className="confetti--piece"></div>
+        <div className="confetti--piece"></div>
+        <div className="confetti--piece"></div>
+        <div className="confetti--piece"></div>
+        <div className="confetti--piece"></div>
+      </div>
       <p className="winnerBanner"><strong>{getWinner()}</strong> is the winner!</p>
     </div>
   );
