@@ -26,4 +26,5 @@
 
 .buttonWrap {
     display: flex;
+    position: relative;
 }

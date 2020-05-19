@@ -3,6 +3,8 @@
     height: 40px;
     position: relative;
     display: inline-block;
+    position: absolute;
+    right: 0;
 }
   .sk-circle .sk-child {
     width: 100%;
