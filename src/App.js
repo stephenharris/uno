@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import './App.css';
 import { GameState } from '../src/gameState';
 import CreateGameScreen from "./screens/CreateGameScreen/CreateGameScreen";
@@ -6,6 +6,7 @@ import AwaitingPlayersScreen from './screens/AwaitingPlayersScreen/AwaitingPlaye
 import Play from './screens/Play/Play';
 import GameOver from './screens/GameOver/GameOver';
 import axios from 'axios';
+import { v4 as uuidv4 } from 'uuid';
 
 function App() {
 
@@ -29,11 +30,7 @@ function App() {
   }
 
   const onJoinGame = (theGameId, playerName) => {
-    
     setGameId(theGameId);
-
-    localStorage.setItem('userId', playerName.toLowerCase());
-
     emit("JOIN_GAME", {
       "name": playerName,
       "id": localStorage.getItem('userId'), 
@@ -44,7 +41,8 @@ function App() {
 
   const onCreateGame = () => {
     axios.post(process.env.REACT_APP_REST_URL, {
-      "game": "uno"
+      "game": "uno",
+      "playerId": localStorage.getItem('userId')
     }).then((response) => {
       console.log(response);
       window.location = '/game/' + response.data.id;
@@ -74,6 +72,12 @@ function App() {
     });
   }
 
+  useEffect(() => {
+    let userId = localStorage.getItem('userId');
+    if(!userId) {
+      localStorage.setItem('userId', uuidv4());
+    }
+  }, []);
 
   return (
     <div className="wrapper">
