@@ -1,5 +1,5 @@
 .toaster {
-    position: fixed;
+    position: sticky;
     -webkit-backface-visibility: hidden;
     -webkit-transform: translateZ(0);
     top: 0;
