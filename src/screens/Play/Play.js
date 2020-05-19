@@ -7,6 +7,7 @@ import cn from "classnames";
 import { TransitionGroup, CSSTransition } from 'react-transition-group' // ES6
 import Modal from '../../components/Modal/Modal';
 import {RadioInput, RadioGroup} from '../../components/RadioInput/RadioInput';
+import Toaster from '../../components/Toaster/Toaster';
 
 function Play({gameState, onPlayCard, onPickUp}) {
 
@@ -78,6 +79,7 @@ function Play({gameState, onPlayCard, onPickUp}) {
 
   return (
     <div>
+      {gameState.msg && <Toaster>{gameState.msg}</Toaster>}
       <div className="wrap">
         <div className="deck">
             <Card 

@@ -1,0 +1,24 @@
+.toaster {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 300px;
+    left: calc(50% - 150px);
+    text-align: center;
+    background: #fefefe;
+    padding: 1rem 0.5rem;
+    box-sizing: border-box;
+    box-shadow: 0 0 10px #aaaaaa;
+    font-size: 1rem;
+
+    transition: transform 0.2s ease 0s, opacity 0.2s ease 0s;
+    transform: translateY(-50%);
+    opacity: 0;
+}
+
+.toaster--visible {
+    transition: transform 0.2s ease 0s, opacity 0.2s ease 0s;
+    transform: translateY(.5rem);
+    opacity: 1;
+}
