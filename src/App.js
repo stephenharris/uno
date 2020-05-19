@@ -45,7 +45,7 @@ function App() {
       "playerId": localStorage.getItem('userId')
     }).then((response) => {
       console.log(response);
-      window.location = '/game/' + response.data.id;
+      window.location = '/' + response.data.id;
     });
   }
 

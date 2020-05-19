@@ -13,7 +13,7 @@ function CreateGameScreen({onJoinGame, onCreateGame}) {
 
   useEffect(() => {
 
-    let match = window.location.pathname.match(/\/game\/([a-zA-Z0-9]+)\/?/);
+    let match = window.location.pathname.match(/\/([a-zA-Z0-9]+)\/?/);
 
     if (match && match[1]) {
       setGameId(match[1]);
