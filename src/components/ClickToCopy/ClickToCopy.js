@@ -24,6 +24,7 @@ const ClickToCopy = ({textToCopy, children, onCopy}) => {
             "position": "absolute"}}
             tabIndex="-1"
             ref={ref}
+            readonly="readonly"
             defaultValue={textToCopy}
         />
     </div>
