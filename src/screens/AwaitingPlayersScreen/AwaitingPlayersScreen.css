@@ -1,8 +1,24 @@
 .awaitingPlayerList {
-    max-width: 300px;
-    margin:auto;
+    max-width: 400px;
+    margin: auto;
+    padding: 0 1em;
 }
 
 .awaitingPlayerList__player--currentPlayer {
     font-weight: bold;;
+}
+
+.clickToCopy {
+    width: 36px;
+    height: 35px;
+    vertical-align: bottom;
+    cursor: pointer;
+}
+
+.clickToCopy__primary {
+    fill:#0063b3;
+}
+
+.clickToCopy__secondary {
+    fill:#6aa4d2;;
 }
